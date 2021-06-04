@@ -1,0 +1,18 @@
+<div id="content-wrapper">
+  <p class="subtitle">Last Counties searched</p>
+    <div *ngIf="countriesSearched.length > 0" class="listed-countries">
+      <p>Usa</p>
+    </div>
+  <p *ngIf="countriesSearched.length === 0" style="text-align: center">no countries searched yet</p>
+  <p class="subtitle">Last Cities searched</p>
+  <div *ngIf="citiesSearched.length > 0" class="listed-countries">
+    <p>luzern</p>
+  </div>
+  <p *ngIf="citiesSearched.length === 0" style="text-align: center">no cities searched yet</p>
+  <p class="subtitle">Go to</p>
+  <div id="go-to-buttons">
+    <button class="button" [routerLink]="['country-search']">Country search</button>
+    <button class="button" [routerLink]="['city-search']">City search</button>
+  </div>
+
+</div>
