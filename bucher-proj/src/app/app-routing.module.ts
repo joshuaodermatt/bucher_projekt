@@ -8,7 +8,6 @@ import {SearchComponent} from "./search/search.component";
 const routes: Routes = [
   {path: 'quick-access', component: QuickAccessComponent},
   {path: 'city-search', component: CitySearchComponent},
-  {path: 'country-search', component: SearchComponent},
   {path: 'search', component: SearchComponent},
   {path: '', redirectTo: 'quick-access', pathMatch: 'full'}
 

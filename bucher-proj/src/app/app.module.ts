@@ -17,7 +17,6 @@ import {CityService} from "./services/city/city.service";
     AppComponent,
     QuickAccessComponent,
     CitySearchComponent,
-    CountrySearchComponent,
     SearchComponent,
   ],
   imports: [
