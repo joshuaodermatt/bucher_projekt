@@ -1,12 +1,23 @@
 <div id="search-field-wrapper">
-  <form>
-    <label for="search-input" *ngIf="mode === 'city'">type in a city</label>
-    <label for="search-input" *ngIf="mode === 'country'">type in a country</label>
-    <br>
-    <br>
-    <input id="search-input" type="text">
-  </form>
-  <button id="search-button">search</button>
+  <p>type in a city</p>
+  <br>
+
+  <div class="ng-autocomplete">
+    <ng-autocomplete
+      [data]="data"
+      (selected)='selectEvent($event)'
+      (inputChanged)='onChangeSearch($event)'
+      (inputFocused)='onFocused($event)'
+      [itemTemplate]="itemTemplate"
+    >
+    </ng-autocomplete>
+
+    <ng-template #itemTemplate let-item>
+      <a [innerHTML]="item"></a>
+    </ng-template>
+  </div>
+  <br>
+  <button [disabled]="!valid" (click)="buttonSearchClicked()" id="search-button">search</button>
 </div>
 
 

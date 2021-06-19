@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CityService} from "../services/city/city.service";
 
 @Component({
   selector: 'app-quick-access',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuickAccessComponent implements OnInit {
 
-  countriesSearched = ['2', '2'];
+  searchHistory: string[] = [];
 
-  citiesSearched = [];
-
-  constructor() { }
+  constructor(public cityService: CityService) { }
 
   ngOnInit(): void {
+    this.searchHistory = this.cityService.getSearchHistory();
+    console.log(this.cityService.searchHistory);
   }
 
 }
