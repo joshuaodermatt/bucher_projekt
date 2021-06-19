@@ -1,0 +1,12 @@
+<div id="content-wrapper">
+  <p class="subtitle">Last Cities searched</p>
+  <div *ngFor="let elem of searchHistory" class="listed-countries">
+    <p>{{elem}}</p>
+  </div>
+  <p *ngIf="searchHistory.length === 0" style="text-align: center">no cities searched yet</p>
+  <p class="subtitle">Go to</p>
+  <div id="go-to-buttons">
+    <button class="button" [routerLink]="['/search']">City search</button>
+  </div>
+
+</div>
