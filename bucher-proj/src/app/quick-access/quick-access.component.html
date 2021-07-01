@@ -1,6 +1,6 @@
 <div id="content-wrapper">
   <p class="subtitle">Last Cities searched</p>
-  <div *ngFor="let elem of searchHistory" class="listed-countries">
+  <div *ngFor="let elem of searchHistory" class="listed-countries" (click)="navigateToCitySearch(elem)">
     <p>{{elem}}</p>
   </div>
   <p *ngIf="searchHistory.length === 0" style="text-align: center">no cities searched yet</p>

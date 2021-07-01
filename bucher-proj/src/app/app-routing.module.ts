@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {QuickAccessComponent} from "./quick-access/quick-access.component";
-import {CountrySearchComponent} from "./country-search/country-search.component";
 import {CitySearchComponent} from "./city-search/city-search.component";
 import {SearchComponent} from "./search/search.component";
 
